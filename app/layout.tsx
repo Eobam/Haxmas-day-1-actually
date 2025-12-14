@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, BBH_Sans_Bogle } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,3 +32,9 @@ export default function RootLayout({
     </html>
   );
 }
+
+const BBHBogle = BBH_Sans_Bogle({ // make sure to import from "next/font/google"!
+	subsets: ["latin"],
+	weight: "400", // some fonts aren't variable, so you'll need to figure out what 
+  // weight to use. Google Fonts can tell you this, usually.
+})
